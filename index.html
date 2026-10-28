@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#121212">
+    <title>Mon IPTV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== ÉCRAN DE CONNEXION ===== -->
+    <div id="ecran-connexion" class="ecran">
+        <div class="carte-connexion">
+            <h1>📺 Mon IPTV</h1>
+
+            <label for="champ-url">Adresse du serveur</label>
+            <input type="text" id="champ-url" placeholder="http://exemple.com" autocomplete="off">
+
+            <label for="champ-user">Nom d'utilisateur</label>
+            <input type="text" id="champ-user" placeholder="username" autocomplete="off">
+
+            <label for="champ-pass">Mot de passe</label>
+            <input type="password" id="champ-pass" placeholder="password">
+
+            <button id="btn-connexion" class="gros-bouton">Se connecter</button>
+
+            <p id="message-connexion" class="message-erreur"></p>
+        </div>
+    </div>
+
+    <!-- ===== ÉCRAN DES CATÉGORIES ===== -->
+    <div id="ecran-categories" class="ecran cache">
+        <div class="barre-haut">
+            <h2>📂 Catégories</h2>
+            <button id="btn-deconnexion" class="petit-bouton">🚪</button>
+        </div>
+        <div id="liste-categories" class="liste"></div>
+    </div>
+
+    <!-- ===== ÉCRAN DES CHAÎNES ===== -->
+    <div id="ecran-chaines" class="ecran cache">
+        <div class="barre-haut">
+            <button id="btn-retour-categories" class="petit-bouton">⬅️</button>
+            <h2 id="titre-categorie">Chaînes</h2>
+        </div>
+        <div id="liste-chaines" class="liste"></div>
+    </div>
+
+    <!-- ===== MESSAGE DE CHARGEMENT ===== -->
+    <div id="chargement" class="cache">
+        <div class="spinner"></div>
+        <p>Chargement...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
